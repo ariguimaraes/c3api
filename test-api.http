@@ -1,0 +1,38 @@
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "faesa@gmail.com",
+  "password": "senha123",
+  "name": "Fulano Silva"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "faesa@gmail.com",
+  "password": "senha123"
+}
+
+###
+
+GET http://localhost:3000/users
+Authorization: Bearer jwt_token_here
+
+###
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+Authorization: Bearer jwt_token_here
+
+{
+  "title": "Meu primeiro post",
+  "content": "Este é o meu primeiro post"
+}
+
+###
+
+GET http://localhost:3000/posts
